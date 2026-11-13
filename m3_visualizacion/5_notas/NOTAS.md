@@ -1,158 +1,204 @@
-Unidad 1 
-Fundamentos de visualizacion de datos
+# Módulo 3: Visualización de datos y Data Discovery
 
-Importancia de la visualización en big data y BI
-Tipos de datos y su representación grafica
+Notas de estudio del diplomado, Univalle, gestión 2026.
+La finalidad es interpretar y comunicar datos con gráficos que sostengan una decisión.
+Las referencias corresponden a las unidades y trabajos disponibles en el módulo.
 
-Unidad 1 
-Fundamentos de visualizacion de datos
+## 1. Mapa del módulo
 
-Principios de percepción visual 
-    Resumen: Gestalt atributos pre-atentivso , jerarqui de cleveland/mcgill
-    
-    Como el cerebo interpreta la información visual
-    PRINCIPIOS DE GESTALT EN VISUALIZACIÓN
-    El cerebro organiza la informaicón visual en patrones no en objetos individuales
-        Proximidad
-            Agrupar lo relacionado
-        Similitud
-            Elementos con color forma o tamano silimiar se perciben como el mismo grupo
-        Cerramietno
-            Elementos encerrados en una forma visual se perciben como pertenecientes al mismo grupo
-        Conexión
-            Conectados con lines como relacionados
-        Continuidad
-            Se perciben lines continuas y fluidas no segmentos desconectados
-        Figura/fondo
-            El cerebro distingue automaticamen elementos del primer plano y el fondo
-    
-    ATRIBUTOS PRE-ATENTIVOS
-    Caracteristicas visuales que percibimos antes de enfocar la atención consciente
-    
-        COLOR
-            Atributo mas poderoso matiz y saturaicon e intensida diferenia y agrupan datos
-            Maixmo 5 a 7 colreos
-        TAMANO
-            Elemtnos mas grandes atran la ateniocn primo indica maginio o omportacina relativa
-            Ideal para bubble chats y word cluds
-        
-        FORMA
-            Diferentes formas permite categorizar elemtno en scatter plots y mapas
-            Formas simpeos ciculo cuadrado triangulo
-        
-        POSICIÓN
-            La ubicación espacial es el canal mas preciso segun cleveland y mcgill
-            Base de grafiso de barras y de puntos
-        
-    JERARQUIA DE CLEVELAND Y MCGILL
-        Barras
-        Barras agrupadas
-        Barras apiladas
-        Pie char linesa
-        Bubble chart
-        Graficos 3d
-        Heatmaps
-        
-        
+- Clase 1: importancia, tipos de datos y elección de gráficos; [fundamentos](../2_recursos/Clase%201.pdf).
+- Unidad 1: Gestalt, percepción, Tufte y errores de diseño; [material de la unidad](../2_recursos/Unidad%201.pdf).
+- Unidad 2, parte 1: Data Discovery, EDA, patrones y métricas; [material de la unidad](../2_recursos/Unidad%202%20-%20P1.pdf).
+- Tarea 2: comparación de un [gráfico honesto](../3_tareas/2/notebook.ipynb) y una [versión engañosa](../3_tareas/2/notebook%20copy.ipynb).
+- Tarea 2, versión final: barras agrupadas, ranking y tendencias; [notebook final](../3_tareas/2/notebook%20final.ipynb).
+- Unidad 4: contexto, datos clave, insight y acción; [Data Storytelling](../2_recursos/Unidad%204.pdf).
+- Proyecto: dashboard Power BI NOC/SOC y medidas DAX; [informe de telemetría](../4_proyecto/LaTeX/main.tex).
 
+## 2. Conceptos clave
 
-Buenas y malas pracricas en visualización
-    Principios de tufte diseno efectivo vs enganoso
+### Tipo de dato y pregunta visual
 
-    PRINCIPIOS DE EDWARD TUFTE
-        Por encia de todo muestra los datos
-        
-        Ratio data-ink (menos ruido mayor claridad)
-            qMaximiza la proporcin de tinta que presetn datos reales eliminar elmein decorativos que no tranmiten informacion
-            
-        Minimizar el chartjunk
-            Evitar elemetnos innceseario fondos decorativos, bordes excesivos sombreado 3d y gridlines redundantes
-            
-        INTEGRIDAD GRAFICA
-            Las representacinoes visuales deben sewr precisas y honestas nunca distorsionar escals ni exagerar diferencias
-            
-        Maximizar data density
-            Presetnar la maor de cantide de informaiucno posible en el menor espacio sin sacrificar claridad
-    
-    
-    BUENAS VS MALAS PRATICAS
-        bueno
-            Usar el tupo de grafico adecuado
-            Eje y en cero para barras
-            Titulo etiquetas y leyendas claras
-            Colores con propositos semantico
-            Dinseo limpio y simple tutle
-            Citar las fuentes de datos
-            Acceibilidad contrate 3:1 minimo
-        Malo
-            Pie chart con +5 categorias
-            Turncar el eje Y [para exagenera
-            Efectos 3d que distorsionan datos
-            Colroes excesivos sin significado 
-            Omitir contexto etiqueta o fuentes
-            Sobrecargar con demsiados varibles
-            Cherry-picking para forar narrativa
-    
-Errores comunes en graficos
-    Ejes truncados graficos 3d cherry picking y mas
+Los datos cuantitativos expresan magnitudes; los categóricos distinguen grupos.
+Los temporales describen evolución y los geográficos incluyen ubicación.
+La elección del gráfico debe responder a la pregunta y a estas propiedades.
+Un histograma muestra distribución; las barras comparan categorías y las líneas evolución.
+Fuente: [clase de fundamentos](../2_recursos/Clase%201.pdf).
 
-KPI y metricas de negocio
+### Percepción y Gestalt
 
-Analisis visual para decisiones
+Comparar posiciones sobre una escala común suele ser más preciso que comparar áreas o ángulos.
+La proximidad agrupa elementos; la similitud relaciona objetos con apariencia semejante.
+La continuidad facilita seguir una serie; figura-fondo permite distinguir lo importante.
+Estos principios explican por qué una composición facilita o dificulta una lectura.
+Fuente: [Unidad 1](../2_recursos/Unidad%201.pdf).
 
-CASO REAL WALMART - EDA EN RETAIL
+### Color y jerarquía
 
-Detección de outliers
-    Valores atipoicos que pueden ser erorre so los insighys mas valisos
-        ○ Iqr rango itercuartilico 
-        ○ Z score
-        ○ Isolation forest
-    Caso real reteccion de fraude con tarjetas de credito 
-KPI y metricas de negocio
-    Kpi indicadores estrategioc alinea con objetivos del negocio. Tiene un target definio y es accionable
-    Metrica cualquier medicion cuantificable del negocio no necesarmente alineada a un objetio estartegico 
-    Un buen KPI es SMART 
-        S
-        M
-        A
-        R
-        T
-KPI por industria
-    Retail
-    Salud
-    Finanzas
-    Tech
+El color dirige la atención y puede asociar categorías.
+Debe mantener un significado coherente y acompañarse de rótulos o formas cuando sea necesario.
+Resaltar solo un canal puede cambiar la impresión del lector sin cambiar los datos.
+La tarea contrasta un color uniforme con un énfasis selectivo sobre Influencers.
+Fuentes: [Unidad 1](../2_recursos/Unidad%201.pdf) y [versión engañosa](../3_tareas/2/notebook%20copy.ipynb).
 
-    
-Ultimo
-Concepto de data storytelling
-Datso
-Narrativa
-Visualización
+### Escala honesta y ruido visual
 
-Estrucutra de una historia con datos
+En barras, la longitud codifica magnitud y necesita una base coherente para comparar.
+Sombras, volumen aparente o elementos decorativos pueden distraer del dato.
+El principio de dato-tinta propone dedicar la mayor parte del diseño a información útil.
+Fuente: [fundamentos](../2_recursos/Clase%201.pdf) y [Unidad 1](../2_recursos/Unidad%201.pdf).
 
-1 contexto => definde el problema la audencia y el objetivo de tu analisis
-2 datos clave => selecciona los datos mas relevantes que respaldan tus mensjae principal
-3 insight => identificai el halalazo principil la revelacion que cambia la prespectivca
-3 accion => propone recomendacion claras basadas en la evidencia presentada
+### Data Discovery y EDA
 
-Visualización para audenncias ejecutivas
-Buenas practicas
-    Usa kpi calro con contexto meta vs real
-    Prioriza lo importante principio de la piramide invertida
-    Limita a 5-7 visualizaciones por dashboard
-    Colores consistentes verde = positiov rojo = alerta
-    Incluey siemrpe el so shat junto al lado
-    
-Errores frecuentes
-    Sobrecargar el dashboard con datos irrelevantes
-    Usar graficos 3d que sitorsionan la percepcion presentar datos sin contexto ni comparacion 
-    Mezclar deemasidaos tispo de grafico
-    Ovlidavar etiqueteat ejes y unidades
-    
-Actividad practica
-Paso 1 explira datos
-Paso 2 identifica 3 insights
-Paso 3 construye tu narrativa
-Paso 4 presenta al grupo
+Data Discovery conecta fuentes, explora datos, visualiza patrones y apoya acciones.
+EDA combina estadísticas, distribuciones, relaciones y revisión de calidad.
+El cuarteto de Anscombe muestra que estadísticas similares pueden ocultar formas distintas.
+Por eso una media o correlación debe complementarse con una inspección gráfica.
+Fuente: [Unidad 2](../2_recursos/Unidad%202%20-%20P1.pdf).
+
+### Patrones y anomalías
+
+Una tendencia describe dirección general; la estacionalidad se repite con periodicidad.
+Un ciclo puede fluctuar sin una frecuencia fija y un outlier se aparta del patrón habitual.
+Una anomalía visual es una señal para investigar, no una explicación suficiente.
+Fuente: [Unidad 2](../2_recursos/Unidad%202%20-%20P1.pdf).
+
+### Data Storytelling
+
+Una historia con datos articula evidencia, narrativa y visualización.
+Su secuencia de trabajo es contexto, datos clave, insight y acción.
+Un insight debe explicar la relevancia del hallazgo para la audiencia.
+Una recomendación debe corresponder a la evidencia y señalar qué queda por confirmar.
+Fuente: [Unidad 4](../2_recursos/Unidad%204.pdf).
+
+### Dashboard NOC/SOC
+
+El proyecto separa una vista operativa de tráfico y una de anomalías y seguridad.
+Comparte datos, pero cambia la pregunta: actividad de red frente a investigación de amenazas.
+El informe describe datos de un entorno controlado con ataques simulados.
+La composición de ese dataset no representa automáticamente la frecuencia de ataques de una red real.
+Fuente: [informe del proyecto](../4_proyecto/LaTeX/main.tex).
+
+## 3. Fórmulas y métricas
+
+### Participación del presupuesto
+
+$Total=\sum_c Presupuesto_c$ y $Participacion_c=\frac{Presupuesto_c}{Total}\times100$.
+El [notebook honesto](../3_tareas/2/notebook.ipynb) usa 205, 327, 75, 410, 135 y 120 miles de USD.
+El total es $205+327+75+410+135+120=1.272$ miles de USD.
+TV representa $410/1.272\times100\approx32,23\%$.
+Influencers representa $120/1.272\times100\approx9,43\%$.
+Los porcentajes ayudan a comparar composición sin ocultar el valor absoluto.
+
+### Variación temporal y diferencia absoluta
+
+Para comparar dos trimestres: $\Delta=x_f-x_i$ y $Variacion=\frac{x_f-x_i}{x_i}\times100$, si $x_i\ne0$.
+Es una formalización de las comparaciones del [notebook final](../3_tareas/2/notebook%20final.ipynb).
+Influencers pasa de 10 a 50 miles de USD: $\Delta=40$ y variación del $400\%$.
+TV pasa de 120 a 85: $\Delta=-35$ y variación aproximada de $-29,17\%$.
+Una subida relativa grande puede partir de una base pequeña.
+El nivel anual y la tendencia responden preguntas distintas.
+
+### Ejemplo: verificar la frase que acompaña al gráfico
+
+El [notebook final](../3_tareas/2/notebook%20final.ipynb) afirma que TV, con 410, supera en más del doble a Google Ads, con 327.
+La relación correcta es $410/327\approx1,254$, y la diferencia es $410-327=83$ miles de USD.
+TV tiene aproximadamente un $25,38\%$ más, no más del doble.
+El gráfico necesita una interpretación numérica consistente para que el mensaje sea confiable.
+Este cálculo revisa la frase; no modifica los datos ni el cuaderno fuente.
+
+### Indicadores de telemetría
+
+Las medidas siguientes se derivan del DAX documentado en el [informe](../4_proyecto/LaTeX/main.tex).
+$TotalFlows=N$, donde cada fila representa un flujo registrado.
+
+$TasaAnomalias=\frac{\#\{filas:label=1\}}{TotalFlows}$.
+
+La medida retorna una proporción; el formato porcentual multiplica visualmente por cien.
+Con los conteos del informe: $336.735/368.017\times100\approx91,50\%$.
+Esta tasa describe etiquetas del dataset; no mide exactitud de un detector.
+
+$Throughput=\frac{\sum sbytes+\sum dbytes}{DuracionSegundos\times1024^2}$.
+
+El informe rotula MB/s, pero el divisor $1024^2$ corresponde a MiB/s.
+La duración usa el intervalo entre el inicio mínimo y el final máximo del contexto filtrado.
+El código sustituye intervalos inválidos por un segundo; ese caso requiere revisar los tiempos.
+
+$FlowsPorHora=\frac{TotalFlows}{DATEDIFF(inicio,fin,HOUR)+1}$.
+
+Es la definición operativa del proyecto; no es un promedio de conteos por hora activa.
+Por ello conviene revisar cómo cambian los extremos temporales al aplicar filtros.
+
+## 4. Código esencial
+
+Fragmentos adaptados de las tareas de presupuesto, con datos contenidos en el cuaderno.
+El primer bloque es autónomo y requiere Python y pandas.
+Fuente: [notebook honesto](../3_tareas/2/notebook.ipynb).
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    'Canal': ['Redes Sociales', 'Google Ads', 'Email', 'TV', 'Eventos', 'Influencers'],
+    'Total': [205, 327, 75, 410, 135, 120],
+})
+total_general = df['Total'].sum()
+df['Porcentaje'] = (df['Total'] / total_general) * 100
+df_sorted = df.sort_values('Total', ascending=True)
+```
+
+Ordenar por magnitud facilita el ranking.
+Mantener el total y su porcentaje evita perder la escala del presupuesto.
+
+Continuación del bloque anterior; requiere Matplotlib.
+Se adapta la barra horizontal del [notebook final](../3_tareas/2/notebook%20final.ipynb).
+
+```python
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.barh(df_sorted['Canal'], df_sorted['Total'], color='steelblue')
+ax.set_xlabel('Presupuesto total (miles USD)')
+ax.set_ylabel('Canal')
+ax.set_title('Presupuesto anual de marketing por canal')
+ax.set_xlim(0, 450)
+plt.tight_layout()
+plt.show()
+```
+
+El proyecto utiliza DAX, no SQL, para estas medidas.
+Se reproducen expresiones del [informe](../4_proyecto/LaTeX/main.tex); requieren la tabla `NetworkTraffic` en Power BI.
+
+```dax
+TotalFlows = COUNTROWS('NetworkTraffic')
+
+TasaAnomalias =
+VAR Anomalias = CALCULATE(COUNTROWS('NetworkTraffic'), 'NetworkTraffic'[label] = 1)
+RETURN DIVIDE(Anomalias, [TotalFlows], 0)
+```
+
+## 5. Errores comunes
+
+- Elegir un gráfico por decoración antes de definir qué comparación se necesita.
+- Truncar la base de barras para exagerar diferencias.
+- Destacar un canal mediante color, orden o separación sin explicar el criterio.
+- Confundir el crecimiento de Influencers con el mayor presupuesto anual.
+- Repetir conclusiones textuales sin contrastar cocientes y diferencias.
+- Presentar la tasa de etiquetas maliciosas como una métrica de clasificación.
+- Omitir unidades, filtros o intervalo temporal al mostrar throughput.
+- Saturar una vista ejecutiva con métricas sin contexto ni acción.
+
+Fuentes: [Unidad 1](../2_recursos/Unidad%201.pdf), [tarea comparativa](../3_tareas/2/notebook%20copy.ipynb), [notebook final](../3_tareas/2/notebook%20final.ipynb)
+y [proyecto de telemetría](../4_proyecto/LaTeX/main.tex).
+La [Unidad 4](../2_recursos/Unidad%204.pdf) recomienda 5–7 visualizaciones por vista y exige al menos ocho en el trabajo final.
+Las dos indicaciones pueden organizarse en las dos pestañas requeridas por la misma consigna.
+
+## 6. Preguntas de repaso
+
+1. ¿Qué gráfico usarías para comparar canales y cuál para su evolución trimestral?
+2. ¿Por qué las barras facilitan comparar magnitudes más que los ángulos de un pastel?
+3. ¿Cómo puede el color manipular la lectura sin alterar los valores?
+4. ¿Qué diferencia existe entre aumentar 40 miles de USD y crecer 400%?
+5. ¿Qué cálculo contradice la frase «más del doble» en la tarea?
+6. ¿Qué información falta cuando una tarjeta muestra solo una cifra?
+7. ¿Por qué una tasa de anomalías del 91,5% no demuestra la calidad de un detector?
+8. ¿Cómo convertirías un hallazgo del dashboard en una acción verificable?

@@ -1,11 +1,37 @@
-### Ejemplo Numérico: Generación de Valor
+# Módulo 4. Business Intelligence y Modelos Predictivos
 
-Cuando procesamos y analizamos los datos, es cuando realmente aparece el valor económico. Para entender cómo se genera este impacto, supongamos que mediante un análisis de datos avanzado se logra identificar un segmento específico de **200 clientes** que presentan una probabilidad de conversión significativamente mayor que el resto.
+Transformar datos en información de negocio mediante ETL, almacenes de datos, análisis OLAP y modelos descriptivos y predictivos. Las prácticas conectan indicadores, estimación de compra y decisiones comerciales.
 
-Para resolver el beneficio de esta estrategia, primero se calculan los costes de ejecución: al lanzar una campaña focalizada exclusivamente en este grupo optimizado, con un coste de contacto de **2€ por cliente**, la inversión total requerida se reduce a **400€** ($200 \times 2€$). En lugar de malgastar recursos de manera masiva, los datos permiten apuntar con precisión.
+## Tareas
 
-A continuación, se determina el retorno financiero del segmento. Gracias a esa segmentación precisa, se alcanza una tasa esperada de compra del **20%**, lo que se traduce directamente en **40 compras efectivas** ($200 \times 20\%$). Sabiendo que cada uno de estos clientes genera un ingreso promedio de **50€**, el volumen de ventas proyectado alcanza un ingreso total de **2.000€** ($40 \times 50€$). Al restar los costes de campaña previamente calculados, el beneficio bruto obtenido es de **1.600€** ($2.000€ - 400€$).
+- [A1: notebook](3_tareas/A1/Ejercicio_A1_FMNQ.ipynb): introducción al análisis de negocio con BI.
+- [A1: presentación](3_tareas/A1/Ejercicio_A1_FMNQ.pptx): presentación de la actividad.
+- [A2](3_tareas/A2/Clase2_ETL_DW_OLAP.ipynb): extracción, transformación, carga y análisis OLAP.
+- [A3](3_tareas/A3/Clase3_Modelos_Descriptivos_Analitica_Exploratoria.ipynb): modelos descriptivos, indicadores y análisis exploratorio.
+- [A4](3_tareas/A4/Clase4_Modelos_Predictivos_Clasificacion_Regresion.ipynb): clasificación de probabilidad de compra y regresión del importe.
 
-La verdadera relevancia del análisis de datos se demuestra al comparar este resultado con el rendimiento del escenario tradicional sin analítica. Mientras que el caso base sin datos generaba apenas 500€ de beneficio debido a la falta de puntería en la campaña, la optimización estadística introduce una mejora neta de **1.100€** de valor incremental para el negocio ($1.600€ - 500€$).
+## Proyecto integrador
 
-Como conclusión fundamental, este ejemplo demuestra que los datos por sí solos no generan ingresos de forma pasiva; el verdadero valor económico aparece únicamente cuando la información cruda se transforma de manera activa en segmentación, priorización de recursos y decisiones comerciales estratégicas.
+Análisis y predicción de fuga de clientes (*churn*) de Telco para orientar acciones de retención: limpieza, exploración, comparación de clasificadores e interpretación de variables.
+
+- [Descripción](4_proyecto/README.md): contexto y organización del proyecto.
+- [Notebook Telco](4_proyecto/notebooks/Telco_Customer_Churn_Analysis.ipynb): flujo de análisis y modelado.
+- [Presentación PDF](4_proyecto/report_latex/main.pdf): presentación del proyecto.
+- [Fuente LaTeX](4_proyecto/report_latex/main.tex): presentación Beamer.
+- [Datos originales](4_proyecto/data/raw/): carpeta con los datos de entrada.
+- [Consigna](4_proyecto/documents/INSTRUCCIONES%20DEL%20PROYECTO%20FINAL%20-%20M%C3%93DULO%20IV.pdf): requisitos del proyecto final.
+
+## Recursos
+
+- [Clase 1 - Fundamentos y Evolución de Business Intelligence](2_recursos/Clase%201%20-%20Fundamentos%20y%20Evoluci%C3%B3n%20de%20Business%20Intelligence) (carpeta de materiales).
+- [Clase 2 - ETL, Datawarehouse y OLAP](2_recursos/Clase%202%20-%20ETL%2C%20Datawarehouse%20y%20OLAP) (carpeta de materiales).
+
+## Ejecución
+
+Usa [requirements de tareas](3_tareas/requirements.txt) para A1–A4 y [requirements del proyecto](4_proyecto/requirements.txt) para Telco. El material de la clase 1 tiene [dependencias propias](2_recursos/Clase%201%20-%20Fundamentos%20y%20Evoluci%C3%B3n%20de%20Business%20Intelligence/requirements.txt). Consulta la preparación de entornos en el índice del diplomado.
+
+Ejecuta cada actividad desde su carpeta `3_tareas/A1/` a `A4/`. A2 regenera `ecommerce_datawarehouse.db`; esa base no está versionada. Revisa las celdas de creación y limpieza antes de ejecutar sobre una base local existente. Ejecuta Telco desde `4_proyecto/notebooks/` para resolver `../data/raw/`; su cargador también ofrece alternativas de carga y descarga si no encuentra el CSV. La ejecución completa no se ha validado.
+
+## Apuntes
+
+[Notas del módulo](5_notas/NOTAS.md) · [Índice del diplomado](../README.md)
