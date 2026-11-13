@@ -107,3 +107,8 @@ desktop.ini
 # Descomenta la siguiente línea si quieres ignorar PDFs generados en carpetas de recursos o reportes.
 # *.pdf
 CONTRATO DIPLOMADO 30% CUOTAS BIG DATA V1.pdf
+
+# --- CSV completos reconstruidos desde sus partes (no subir, >50MB) ---
+m2_analytics/3_tareas/datasets/enron_spam.csv
+m2_analytics/4_proyecto/data/raw/universal_top_spotify_songs.csv
+m3_visualizacion/4_proyecto/Dataset_completo.csv
